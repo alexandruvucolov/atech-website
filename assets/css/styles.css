@@ -252,7 +252,7 @@ a {
 
 /* Company Overview */
 .company-overview {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
@@ -319,7 +319,7 @@ a {
 
 /* Quick Actions */
 .quick-actions {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     background: white;
 }
 
@@ -379,12 +379,12 @@ a {
 
 /* Section Styles */
 section {
-    padding: 5rem 0;
+    padding: 2.5rem 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .section-title {
@@ -504,7 +504,7 @@ section {
 /* Featured Services Section */
 .featured-services {
     background: white;
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 .featured-grid {
@@ -632,7 +632,7 @@ section {
 /* FAQ Section */
 .faq {
     background: white;
-    padding: 5rem 0;
+    padding: 2.5rem 0;
 }
 
 .faq-list {
@@ -1052,7 +1052,7 @@ section {
     }
     
     section {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
     
     .nav-container {
