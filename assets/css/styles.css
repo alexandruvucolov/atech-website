@@ -39,7 +39,7 @@ h4 { font-size: 1.25rem; }
 
 p {
     color: #64748b;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 a {
@@ -1063,6 +1063,17 @@ section {
         flex-direction: column;
         text-align: center;
     }
+    
+    /* Tighter paragraph spacing for mobile */
+    p {
+        margin-bottom: 0.4rem;
+    }
+    
+    .service-card p,
+    .reason-card p,
+    .industry-card p {
+        margin-bottom: 0.4rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1097,6 +1108,17 @@ section {
     .consultation-form,
     .contact-info {
         padding: 1.5rem;
+    }
+    
+    /* Very tight paragraph spacing for small screens */
+    p {
+        margin-bottom: 0.3rem;
+    }
+    
+    .service-card p,
+    .reason-card p,
+    .industry-card p {
+        margin-bottom: 0.3rem;
     }
     
     .back-to-top {
