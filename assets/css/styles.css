@@ -382,6 +382,22 @@ section {
     padding: 2.5rem 0;
 }
 
+/* Single Page Application Styles */
+.page-section {
+    display: none;
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
+}
+
+.page-section.active {
+    display: block;
+}
+
+/* Home section should always be visible initially */
+#home {
+    display: block;
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 2rem;

@@ -1,13 +1,83 @@
 // Main JavaScript file for Atech Engineering Solutions website
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize all functionality
+  initSPA();
   initNavigation();
   initScrollAnimations();
   initFAQ();
   initContactForm();
   initBackToTop();
-  initSmoothScrolling();
 });
+
+// Single Page Application functionality
+function initSPA() {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const pageSection = document.querySelectorAll(".page-section");
+  const actionButtons = document.querySelectorAll("[data-section]");
+
+  // Handle navigation clicks
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetSection = this.getAttribute("data-section");
+      showSection(targetSection);
+      setActiveNav(this);
+    });
+  });
+
+  // Handle button clicks with data-section attribute
+  actionButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetSection = this.getAttribute("data-section");
+      if (targetSection) {
+        showSection(targetSection);
+        // Update nav active state
+        const correspondingNavLink = document.querySelector(`[data-section="${targetSection}"]`);
+        if (correspondingNavLink && correspondingNavLink.classList.contains("nav-link")) {
+          setActiveNav(correspondingNavLink);
+        }
+      }
+    });
+  });
+
+  function showSection(sectionId) {
+    // Hide all sections
+    pageSection.forEach((section) => {
+      section.classList.remove("active");
+    });
+
+    // Show target section
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      targetSection.classList.add("active");
+      // Scroll to top of the page
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  function setActiveNav(activeLink) {
+    // Remove active class from all nav links
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    // Add active class to clicked link
+    activeLink.classList.add("active");
+  }
+
+  // Handle browser back/forward buttons
+  window.addEventListener("popstate", function (e) {
+    const sectionId = e.state ? e.state.section : "home";
+    showSection(sectionId);
+    const navLink = document.querySelector(`[data-section="${sectionId}"]`);
+    if (navLink && navLink.classList.contains("nav-link")) {
+      setActiveNav(navLink);
+    }
+  });
+
+  // Set initial state
+  history.replaceState({ section: "home" }, "", "#home");
+}
 
 // Navigation functionality
 function initNavigation() {
@@ -48,39 +118,9 @@ function initNavigation() {
       navbar.classList.remove("scrolled");
     }
   });
-
-  // Active nav link highlighting
-  highlightActiveNavLink();
-  window.addEventListener("scroll", highlightActiveNavLink);
 }
 
-// Highlight active navigation link based on scroll position
-function highlightActiveNavLink() {
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
 
-  let currentSection = "";
-  const scrollPosition = window.scrollY + 100;
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-
-    if (
-      scrollPosition >= sectionTop &&
-      scrollPosition < sectionTop + sectionHeight
-    ) {
-      currentSection = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${currentSection}`) {
-      link.classList.add("active");
-    }
-  });
-}
 
 // Scroll animations
 function initScrollAnimations() {
@@ -396,29 +436,72 @@ function initQuickActions() {
 
       switch (action) {
         case "consultation":
-          scrollToSection("contact");
-          focusElement('#consultationForm input[name="name"]');
+        case "contact":
+          // Navigate to contact section
+          showSectionFromAction("contact");
+          setTimeout(() => {
+            focusElement('#consultationForm input[name="name"]');
+          }, 300);
+          break;
+        case "services":
+          // Navigate to services section
+          showSectionFromAction("services");
           break;
         case "catalog":
           // This would typically download a catalog or open a modal
           showNotification("Catalog download will be available soon!");
           break;
         case "quote":
-          scrollToSection("contact");
-          focusElement('#consultationForm textarea[name="message"]');
-          // Pre-fill message
-          document.querySelector(
-            '#consultationForm textarea[name="message"]'
-          ).value = "I would like to request a quote for: ";
+          // Navigate to contact section and pre-fill form
+          showSectionFromAction("contact");
+          setTimeout(() => {
+            focusElement('#consultationForm textarea[name="message"]');
+            const messageField = document.querySelector('#consultationForm textarea[name="message"]');
+            if (messageField) {
+              messageField.value = "I would like to request a quote for: ";
+            }
+          }, 300);
           break;
         case "support":
           // This would typically open a support widget or redirect
           window.location.href =
             "mailto:sales@atech-tools.com?subject=Technical Support Request";
           break;
+        case "calculator":
+          showNotification("Cutting calculator feature coming soon!");
+          break;
+        case "converter":
+          showNotification("Units converter feature coming soon!");
+          break;
       }
     });
   });
+}
+
+// Helper function to navigate to section from quick actions
+function showSectionFromAction(sectionId) {
+  // Hide all sections
+  const pageSection = document.querySelectorAll(".page-section");
+  pageSection.forEach((section) => {
+    section.classList.remove("active");
+  });
+
+  // Show target section
+  const targetSection = document.getElementById(sectionId);
+  if (targetSection) {
+    targetSection.classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Update nav active state
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
+  const correspondingNavLink = document.querySelector(`[data-section="${sectionId}"]`);
+  if (correspondingNavLink && correspondingNavLink.classList.contains("nav-link")) {
+    correspondingNavLink.classList.add("active");
+  }
 }
 
 // Utility functions

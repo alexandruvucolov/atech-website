@@ -42,11 +42,11 @@
             </div>
             
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
-                <a href="#industries" class="nav-link">Industries</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#services" class="nav-link" data-section="services">Services</a>
+                <a href="#why-choose-us" class="nav-link" data-section="why-choose-us">Why Choose Us</a>
+                <a href="#industries" class="nav-link" data-section="industries">Industries</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
             </div>
             
             <div class="nav-toggle" id="nav-toggle">
@@ -57,25 +57,27 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="container">
-                <div class="hero-text">
-                    <h1 class="hero-title">Engineering Excellence. Digital Innovation.</h1>
-                    <p class="hero-subtitle">Your comprehensive partner for CNC machining, engineering services, ZCC-CT cutting tools, and modern digital solutions. We combine 15+ years of manufacturing expertise with cutting-edge app development and web technologies to drive your business forward.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Request Consultation</a>
-                        <a href="#services" class="btn btn-secondary">Our Services</a>
+    <!-- Home Page Section -->
+    <div id="home" class="page-section active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Engineering Excellence. Digital Innovation.</h1>
+                        <p class="hero-subtitle">Your comprehensive partner for CNC machining, engineering services, ZCC-CT cutting tools, and modern digital solutions. We combine 15+ years of manufacturing expertise with cutting-edge app development and web technologies to drive your business forward.</p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary" data-section="contact">Request Consultation</a>
+                            <a href="#" class="btn btn-secondary" data-section="services">Our Services</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                                        <img src="assets/images/mainImage.png" alt="CNC Machining and Engineering Services" class="hero-img">
                     </div>
                 </div>
-                <div class="hero-image">
-                                    <img src="assets/images/mainImage.png" alt="CNC Machining and Engineering Services" class="hero-img">
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Company Overview -->
     <section class="company-overview">
@@ -108,46 +110,48 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Quick Actions -->
-    <section class="quick-actions">
-        <div class="container">
-            <div class="quick-grid">
-                <div class="quick-item quick-primary" data-action="calculator">
-                    <div class="quick-icon">
-                        <i class="fas fa-calculator"></i>
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <div class="container">
+                <div class="quick-grid">
+                    <div class="quick-item quick-primary" data-action="calculator">
+                        <div class="quick-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Cutting Calculator</h3>
+                        <p>Calculate optimal parameters</p>
                     </div>
-                    <h3>Cutting Calculator</h3>
-                    <p>Calculate optimal parameters</p>
-                </div>
-                <div class="quick-item quick-secondary" data-action="converter">
-                    <div class="quick-icon">
-                        <i class="fas fa-exchange-alt"></i>
+                    <div class="quick-item quick-secondary" data-action="converter">
+                        <div class="quick-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Units Converter</h3>
+                        <p>Convert machining units</p>
                     </div>
-                    <h3>Units Converter</h3>
-                    <p>Convert machining units</p>
-                </div>
-                <div class="quick-item quick-tertiary" data-action="services">
-                    <div class="quick-icon">
-                        <i class="fas fa-tools"></i>
+                    <div class="quick-item quick-tertiary" data-action="services">
+                        <div class="quick-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Our Services</h3>
+                        <p>Explore what we offer</p>
                     </div>
-                    <h3>Our Services</h3>
-                    <p>Explore what we offer</p>
-                </div>
-                <div class="quick-item quick-quaternary" data-action="contact">
-                    <div class="quick-icon">
-                        <i class="fas fa-phone"></i>
+                    <div class="quick-item quick-quaternary" data-action="contact">
+                        <div class="quick-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Contact Us</h3>
+                        <p>Get in touch today</p>
                     </div>
-                    <h3>Contact Us</h3>
-                    <p>Get in touch today</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Services Page Section -->
+    <div id="services" class="page-section">
+        <section class="services">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our Services</h2>
@@ -228,10 +232,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Featured Services Section -->
-    <section class="featured-services">
+        <!-- Featured Services Section -->
+        <section class="featured-services">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Solutions</h2>
@@ -304,10 +308,12 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="why-choose-us">
+    <!-- Why Choose Us Page Section -->
+    <div id="why-choose-us" class="page-section">
+        <section class="why-choose-us">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Why Choose Atech Engineering Solutions?</h2>
@@ -365,10 +371,12 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- Industries Section -->
-    <section id="industries" class="industries">
+    <!-- Industries Page Section -->
+    <div id="industries" class="page-section">
+        <section class="industries">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Industries We Serve</h2>
@@ -441,10 +449,13 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- FAQ Section -->
-    <section class="faq">
+    <!-- Contact Page Section -->
+    <div id="contact" class="page-section">
+        <!-- FAQ Section -->
+        <section class="faq">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Frequently Asked Questions</h2>
@@ -483,10 +494,10 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+        <!-- Contact Section -->
+        <section class="contact">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Contact Us</h2>
@@ -564,7 +575,8 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
