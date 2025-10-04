@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Single Page Application functionality
 function initSPA() {
+  // Add SPA mode class to body
+  document.body.classList.add("spa-mode");
+
   const navLinks = document.querySelectorAll(".nav-link");
   const pageSection = document.querySelectorAll(".page-section");
   const actionButtons = document.querySelectorAll("[data-section]");
@@ -33,8 +36,13 @@ function initSPA() {
       if (targetSection) {
         showSection(targetSection);
         // Update nav active state
-        const correspondingNavLink = document.querySelector(`[data-section="${targetSection}"]`);
-        if (correspondingNavLink && correspondingNavLink.classList.contains("nav-link")) {
+        const correspondingNavLink = document.querySelector(
+          `[data-section="${targetSection}"]`
+        );
+        if (
+          correspondingNavLink &&
+          correspondingNavLink.classList.contains("nav-link")
+        ) {
           setActiveNav(correspondingNavLink);
         }
       }
@@ -42,6 +50,8 @@ function initSPA() {
   });
 
   function showSection(sectionId) {
+    console.log("Switching to section:", sectionId);
+
     // Hide all sections
     pageSection.forEach((section) => {
       section.classList.remove("active");
@@ -51,10 +61,16 @@ function initSPA() {
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
       targetSection.classList.add("active");
+      console.log("Section activated:", sectionId);
       // Scroll to top of the page
       window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      console.error("Section not found:", sectionId);
     }
   }
+
+  // Initialize with home section active
+  showSection("home");
 
   function setActiveNav(activeLink) {
     // Remove active class from all nav links
@@ -119,8 +135,6 @@ function initNavigation() {
     }
   });
 }
-
-
 
 // Scroll animations
 function initScrollAnimations() {
@@ -456,7 +470,9 @@ function initQuickActions() {
           showSectionFromAction("contact");
           setTimeout(() => {
             focusElement('#consultationForm textarea[name="message"]');
-            const messageField = document.querySelector('#consultationForm textarea[name="message"]');
+            const messageField = document.querySelector(
+              '#consultationForm textarea[name="message"]'
+            );
             if (messageField) {
               messageField.value = "I would like to request a quote for: ";
             }
@@ -498,8 +514,13 @@ function showSectionFromAction(sectionId) {
   navLinks.forEach((link) => {
     link.classList.remove("active");
   });
-  const correspondingNavLink = document.querySelector(`[data-section="${sectionId}"]`);
-  if (correspondingNavLink && correspondingNavLink.classList.contains("nav-link")) {
+  const correspondingNavLink = document.querySelector(
+    `[data-section="${sectionId}"]`
+  );
+  if (
+    correspondingNavLink &&
+    correspondingNavLink.classList.contains("nav-link")
+  ) {
     correspondingNavLink.classList.add("active");
   }
 }

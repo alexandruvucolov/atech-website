@@ -256,6 +256,12 @@ a {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
+/* Remove background and padding from company-overview in SPA mode */
+.spa-mode .company-overview {
+    background: none;
+    padding: 0.5rem 0;
+}
+
 .overview-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -382,20 +388,118 @@ section {
     padding: 2.5rem 0;
 }
 
+/* Override section padding in SPA mode for tighter layout */
+body.spa-mode section {
+    padding: 0.5rem 0;
+}
+
+body.spa-mode .hero {
+    padding: 0;
+}
+
+body.spa-mode .company-overview {
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+body.spa-mode .featured-services {
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+body.spa-mode .services {
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+body.spa-mode .quick-actions {
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
 /* Single Page Application Styles */
 .page-section {
-    display: none;
-    min-height: calc(100vh - 80px);
+    display: none !important;
     padding-top: 80px;
 }
 
 .page-section.active {
-    display: block;
+    display: block !important;
 }
 
-/* Home section should always be visible initially */
-#home {
-    display: block;
+/* Ensure no scrolling in SPA mode */
+body.spa-mode {
+    overflow-x: hidden;
+}
+
+/* Hide individual sections when in SPA mode */
+.spa-mode .page-section:not(.active) {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Optimize spacing for SPA mode */
+.spa-mode .page-section {
+    padding-top: 80px;
+    padding-bottom: 0;
+}
+
+.spa-mode .page-section section {
+    padding: 1rem 0;
+}
+
+.spa-mode .page-section section:first-child {
+    padding-top: 0;
+}
+
+.spa-mode .page-section section:last-child {
+    padding-bottom: 0;
+}
+
+/* Reduce gaps between service cards and featured content */
+.spa-mode .services-grid {
+    gap: 1.5rem;
+}
+
+.spa-mode .featured-grid {
+    gap: 2rem;
+}
+
+.spa-mode .industries-grid {
+    gap: 1.5rem;
+}
+
+.spa-mode .reasons-grid {
+    gap: 1.5rem;
+}
+
+.spa-mode .section-header {
+    margin-bottom: 1.5rem;
+}
+
+/* Remove excessive spacing at bottom of page sections */
+.spa-mode .page-section .container:last-child {
+    padding-bottom: 0;
+}
+
+/* Tighter spacing for specific sections in SPA mode */
+.spa-mode .industries,
+.spa-mode .why-choose-us,
+.spa-mode .services,
+.spa-mode .faq,
+.spa-mode .contact {
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+/* Eliminate gaps between sections in Services page */
+.spa-mode #services .company-overview {
+    display: none; /* Hide duplicate company overview in services page */
+}
+
+.spa-mode .section-header {
+    margin-bottom: 1rem;
+    margin-top: 0;
 }
 
 .section-header {
@@ -418,6 +522,11 @@ section {
 
 /* Services Section */
 .services {
+    background: #f8fafc;
+}
+
+/* Consistent background in SPA mode */
+.spa-mode .services {
     background: #f8fafc;
 }
 
@@ -521,6 +630,12 @@ section {
 .featured-services {
     background: white;
     padding: 3rem 0;
+}
+
+/* Remove background and padding from featured-services in SPA mode */
+.spa-mode .featured-services {
+    background: none;
+    padding: 0.5rem 0;
 }
 
 .featured-grid {
