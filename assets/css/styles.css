@@ -260,7 +260,7 @@ a {
 
 /* Remove background and padding from company-overview in SPA mode */
 .spa-mode .company-overview {
-    background: none;
+    background: red;
     padding: 0.5rem 0 0.5rem 0;
 }
 
