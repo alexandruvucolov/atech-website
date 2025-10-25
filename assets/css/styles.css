@@ -423,6 +423,7 @@ body.spa-mode .quick-actions {
 .page-section {
     display: none !important;
     padding-top: 80px;
+    padding-bottom: 0;
 }
 
 .page-section.active {
@@ -521,19 +522,21 @@ body.spa-mode {
 /* Services Section */
 .services {
     background: #f8fafc;
-    padding: 1.5rem 0 2rem 0;
+    padding: 1.5rem 0 1rem 0;
 }
 
 /* Consistent background in SPA mode */
 .spa-mode .services {
     background: #f8fafc;
+    padding: 0.5rem 0;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .service-card {
