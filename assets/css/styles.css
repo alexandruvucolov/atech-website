@@ -518,7 +518,7 @@ body.spa-mode {
 /* Services Section */
 .services {
     background: #f8fafc;
-    padding: 1.5rem 0 1rem 0;
+    padding: 1.5rem 0 0rem 0;
 }
 
 /* Consistent background in SPA mode */
@@ -1447,8 +1447,9 @@ a:focus {
 /* Digital Solutions Showcase */
 .digital-solutions-showcase {
     background: white;
-    padding: 2rem 0;
-    margin-top: 1rem;
+    padding: 3rem 0 2rem 0;
+    margin-top: 2rem;
+    border-radius: 16px;
 }
 
 .showcase-header {
