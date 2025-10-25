@@ -443,6 +443,11 @@ body.spa-mode {
     padding-bottom: 0;
 }
 
+/* Reduce top padding for services page since it has no hero */
+.spa-mode #services.page-section {
+    padding-top: 90px;
+}
+
 .spa-mode .page-section section {
     padding: 1rem 0;
 }
@@ -518,21 +523,23 @@ body.spa-mode {
 /* Services Section */
 .services {
     background: #f8fafc;
-    padding: 0.5rem 0 0rem 0;
+    padding: 0;
+    margin: 0;
 }
 
 /* Consistent background in SPA mode */
 .spa-mode .services {
     background: #f8fafc;
-    padding: 0.5rem 0;
+    padding: 0;
+    margin: 0;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .service-card {
