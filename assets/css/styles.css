@@ -1349,14 +1349,14 @@ a:focus {
 /* Services Hero Section */
 .services-hero {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    padding: 3rem 0 1rem 0;
-    margin-bottom: 0.5rem;
+    padding: 2rem 0 0.5rem 0;
+    margin-bottom: 1rem;
 }
 
 .services-hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -1405,7 +1405,7 @@ a:focus {
 
 .services-hero-image img {
     width: 100%;
-    height: 400px;
+    height: 250px;
     object-fit: cover;
     border-radius: 20px;
 }
