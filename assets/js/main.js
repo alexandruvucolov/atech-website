@@ -17,6 +17,7 @@ function initSPA() {
   const navLinks = document.querySelectorAll(".nav-link");
   const pageSection = document.querySelectorAll(".page-section");
   const actionButtons = document.querySelectorAll("[data-section]");
+  const footerLinks = document.querySelectorAll('.footer-links a[href^="#"]');
 
   // Handle navigation clicks
   navLinks.forEach((link) => {
@@ -25,6 +26,25 @@ function initSPA() {
       const targetSection = this.getAttribute("data-section");
       showSection(targetSection);
       setActiveNav(this);
+    });
+  });
+
+  // Handle footer links
+  footerLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetSection = this.getAttribute("href").substring(1); // Remove #
+      showSection(targetSection);
+      // Update nav active state
+      const correspondingNavLink = document.querySelector(
+        `[data-section="${targetSection}"]`
+      );
+      if (
+        correspondingNavLink &&
+        correspondingNavLink.classList.contains("nav-link")
+      ) {
+        setActiveNav(correspondingNavLink);
+      }
     });
   });
 
