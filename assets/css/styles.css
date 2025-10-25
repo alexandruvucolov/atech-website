@@ -261,7 +261,7 @@ a {
 /* Remove background and padding from company-overview in SPA mode */
 .spa-mode .company-overview {
     background: none;
-    padding: 0.5rem 0 2rem 0;
+    padding: 0.5rem 0 0.5rem 0;
 }
 
 .overview-content {
@@ -411,7 +411,7 @@ body.spa-mode .services {
 }
 
 body.spa-mode .quick-actions {
-    padding: 2rem 0;
+    padding: 0.5rem 0;
     margin: 0;
 }
 
