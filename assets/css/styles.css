@@ -1837,9 +1837,8 @@ a:focus {
     }
     
     .reason-image {
-        max-width: 400px;
-        margin: 0 auto;
         width: 100%;
+        margin: 0 auto;
     }
     
     .reason-image img {
