@@ -179,7 +179,7 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     background: green;
@@ -256,9 +256,6 @@ a {
 .company-overview {
     padding: 3rem 0;
     background: red;
-    position: relative;
-    top: -300px;
-    margin-bottom: -300px;
 }
 
 /* Remove background and padding from company-overview in SPA mode */
