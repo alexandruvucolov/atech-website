@@ -523,14 +523,14 @@ body.spa-mode {
 /* Services Section */
 .services {
     background: #f8fafc;
-    padding: 0;
+    padding: 4rem 0;
     margin: 0;
 }
 
 /* Consistent background in SPA mode */
 .spa-mode .services {
     background: #f8fafc;
-    padding: 0;
+    padding: 4rem 0;
     margin: 0;
 }
 
