@@ -328,7 +328,7 @@ a {
 /* Quick Actions */
 .quick-actions {
     padding: 2.5rem 0;
-    background: white;
+    background: darkgray;
 }
 
 .quick-grid {
