@@ -515,6 +515,7 @@ body.spa-mode {
 /* Services Section */
 .services {
     background: #f8fafc;
+    padding: 1.5rem 0 2rem 0;
 }
 
 /* Consistent background in SPA mode */
@@ -526,6 +527,7 @@ body.spa-mode {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 .service-card {
@@ -1338,8 +1340,8 @@ a:focus {
 /* Services Hero Section */
 .services-hero {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    padding: 4rem 0;
-    margin-bottom: 3rem;
+    padding: 3rem 0 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .services-hero-content {
