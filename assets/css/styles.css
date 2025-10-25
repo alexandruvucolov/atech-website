@@ -1838,6 +1838,10 @@ a:focus {
         max-width: 400px;
         margin: 0 auto;
     }
+    
+    .reason-image img {
+        height: 250px;
+    }
 }
 
 /* Enhanced Industries Section */
