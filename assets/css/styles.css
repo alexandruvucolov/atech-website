@@ -256,6 +256,7 @@ a {
 .company-overview {
     padding: 3rem 0;
     background: red;
+    margin-top: 500px;
 }
 
 /* Remove background and padding from company-overview in SPA mode */
