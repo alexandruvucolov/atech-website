@@ -258,6 +258,7 @@ a {
     background: red;
     position: relative;
     top: -300px;
+    margin-bottom: -300px;
 }
 
 /* Remove background and padding from company-overview in SPA mode */
