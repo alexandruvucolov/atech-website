@@ -1099,6 +1099,29 @@ body.spa-mode {
         text-align: center;
     }
     
+    /* Mobile: Ensure images are consistent size and order */
+    .overview-image {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    .overview-image img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .hero-image {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
     .overview-stats {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1831,6 +1854,21 @@ a:focus {
         direction: ltr;
     }
     
+    /* Mobile: Always show image first, then text */
+    .reason-image {
+        order: -1;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 1.5rem auto;
+    }
+    
+    .reason-image img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+    
     .reason-section:nth-child(even) {
         margin-left: -1rem;
         margin-right: -1rem;
@@ -1840,17 +1878,6 @@ a:focus {
     
     .reason-text h3 {
         font-size: 1.75rem;
-    }
-    
-    .reason-image {
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    .reason-image img {
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
     }
 }
 
@@ -2032,6 +2059,21 @@ a:focus {
         gap: 2rem;
     }
     
+    /* Mobile: Image first, then text */
+    .industries-hero-image {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    .industries-hero-image img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+    
     .industries-hero {
         padding: 3rem 0;
         margin-bottom: 2rem;
@@ -2059,10 +2101,6 @@ a:focus {
         font-size: 0.8rem;
     }
     
-    .industries-hero-image img {
-        height: 250px;
-    }
-    
     .industry-showcase-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2071,6 +2109,20 @@ a:focus {
     
     .industry-showcase.reverse .industry-showcase-content {
         direction: ltr;
+    }
+    
+    /* Mobile: Always show image first */
+    .industry-showcase-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto 1.5rem auto;
+    }
+    
+    .industry-showcase-image img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
     }
     
     .industry-showcase:nth-child(even) {
@@ -2082,15 +2134,6 @@ a:focus {
     
     .industry-showcase-text h3 {
         font-size: 1.5rem;
-    }
-    
-    .industry-showcase-image {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    
-    .industry-showcase-image img {
-        height: 200px;
     }
     
     /* Better reason section mobile styling */
