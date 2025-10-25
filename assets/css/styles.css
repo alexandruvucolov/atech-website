@@ -182,7 +182,7 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: green;
     overflow: hidden;
     padding-top: 130px;
 }
@@ -255,7 +255,7 @@ a {
 /* Company Overview */
 .company-overview {
     padding: 3rem 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: red;
 }
 
 /* Remove background and padding from company-overview in SPA mode */
