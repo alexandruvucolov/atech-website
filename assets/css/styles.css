@@ -184,6 +184,7 @@ a {
     align-items: center;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     overflow: hidden;
+    padding-top: 130px;
 }
 
 .hero-bg {
@@ -201,7 +202,8 @@ a {
 .hero-content {
     position: relative;
     z-index: 2;
-    padding-top: 80px;
+    padding-top: 0;
+    width: 100%;
 }
 
 .hero-content .container {
