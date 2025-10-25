@@ -256,7 +256,12 @@ a {
 .company-overview {
     padding: 3rem 0;
     background: red;
-    margin-bottom: 50px;
+}
+
+/* Spacer Section */
+.spacer-section {
+    padding: 50px 0;
+    background: gray;
 }
 
 /* Remove background and padding from company-overview in SPA mode */
