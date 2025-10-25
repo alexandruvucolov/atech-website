@@ -22,7 +22,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2.5rem;
 }
 
 /* Typography */
@@ -523,14 +523,14 @@ body.spa-mode {
 /* Services Section */
 .services {
     background: #f8fafc;
-    padding: 4rem 0;
+    padding: 4rem 0 6rem 0;
     margin: 0;
 }
 
 /* Consistent background in SPA mode */
 .spa-mode .services {
     background: #f8fafc;
-    padding: 4rem 0;
+    padding: 4rem 0 6rem 0;
     margin: 0;
 }
 
@@ -1646,21 +1646,21 @@ a:focus {
 
 /* Enhanced Why Choose Us Section */
 .why-choose-us {
-    padding: 4rem 0;
+    padding: 4rem 0 6rem 0;
     background: #f8fafc;
 }
 
 .reason-section {
     margin: 4rem 0;
-    padding: 3rem 0;
+    padding: 3rem 2rem;
 }
 
 .reason-section:nth-child(even) {
     background: white;
-    margin-left: -2rem;
-    margin-right: -2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
     border-radius: 20px;
 }
 
