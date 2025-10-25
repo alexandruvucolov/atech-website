@@ -1304,6 +1304,8 @@ body.spa-mode {
     .reason-image img,
     .industry-showcase-image img {
         height: 200px;
+        width: 100%;
+        object-fit: cover;
     }
     
     .overview-stats {
@@ -1837,10 +1839,13 @@ a:focus {
     .reason-image {
         max-width: 400px;
         margin: 0 auto;
+        width: 100%;
     }
     
     .reason-image img {
         height: 250px;
+        width: 100%;
+        object-fit: cover;
     }
 }
 
