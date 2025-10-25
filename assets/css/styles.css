@@ -1135,7 +1135,11 @@ body.spa-mode {
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
     }
     
     .hero-buttons {
@@ -1148,7 +1152,11 @@ body.spa-mode {
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
     }
     
     .services-grid,
@@ -1199,11 +1207,11 @@ body.spa-mode {
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .hero-buttons {
@@ -1214,6 +1222,8 @@ body.spa-mode {
     .btn {
         width: 100%;
         max-width: 280px;
+        font-size: 0.9rem;
+        padding: 10px 18px;
     }
     
     .quick-grid {
@@ -1247,6 +1257,53 @@ body.spa-mode {
         right: 20px;
         width: 45px;
         height: 45px;
+    }
+    
+    /* Mobile optimization for hero sections */
+    .industries-hero-text .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .industries-hero-text .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .industries-stats {
+        gap: 0.75rem;
+    }
+    
+    .stat-number {
+        font-size: 1.75rem;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .reason-text h3 {
+        font-size: 1.35rem;
+    }
+    
+    .reason-text p {
+        font-size: 0.95rem;
+    }
+    
+    .reason-features li {
+        font-size: 0.9rem;
+    }
+    
+    .industry-showcase-text h3 {
+        font-size: 1.35rem;
+    }
+    
+    .industries-hero-image img,
+    .reason-image img,
+    .industry-showcase-image img {
+        height: 200px;
     }
     
     .overview-stats {
@@ -1961,14 +2018,35 @@ a:focus {
         gap: 2rem;
     }
     
+    .industries-hero {
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+    }
+    
     .industries-hero-text .section-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+    
+    .industries-hero-text .section-subtitle {
+        font-size: 1rem;
     }
     
     .industries-stats {
         justify-content: center;
-        gap: 1.5rem;
+        gap: 1rem;
         flex-wrap: wrap;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .industries-hero-image img {
+        height: 250px;
     }
     
     .industry-showcase-content {
@@ -1989,11 +2067,45 @@ a:focus {
     }
     
     .industry-showcase-text h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .industry-showcase-image {
         max-width: 400px;
         margin: 0 auto;
+    }
+    
+    .industry-showcase-image img {
+        height: 200px;
+    }
+    
+    /* Better reason section mobile styling */
+    .reason-section {
+        margin: 2rem 0;
+        padding: 2rem 1rem;
+    }
+    
+    .reason-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .reason-text p {
+        font-size: 1rem;
+    }
+    
+    .reason-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin: 0 auto 1rem auto;
+    }
+    
+    .reason-features li {
+        font-size: 0.95rem;
+        padding-left: 1.5rem;
+    }
+    
+    .reason-image img {
+        height: 250px;
     }
 }
